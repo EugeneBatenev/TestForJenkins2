@@ -12,3 +12,7 @@ python3 run_mock_tests.py
 ## Jenkins и TestOps
 
 `Jenkinsfile` запускает тесты через `allurectl watch` и загружает результаты в TestOps. На Jenkins-агенте должен быть установлен `allurectl`, а в Jenkins необходимо создать Secret text credential с идентификатором `allure-token` и значением токена TestOps. Используются те же endpoint и project id, что и в примере: `https://nimaruichi.qameta.in` и проект `1`.
+
+## GitHub Actions и TestOps
+
+Workflow `.github/workflows/python-tests.yml` запускается вручную из вкладки **Actions**. Перед запуском добавьте секрет репозитория `ALLURE_TOKEN` со значением токена TestOps.
